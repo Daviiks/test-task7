@@ -1,6 +1,6 @@
 ﻿import pytest
 import random
-from factorial import *
+from src.factorial import *
 
 @pytest.mark.parametrize(
     "input_number, expected_result",

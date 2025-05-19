@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4922894a-25f1-442f-8c92-775ee294116f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>main.py</StartupFile>
+    <StartupFile>src\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>test_task7</Name>
     <RootNamespace>test_task7</RootNamespace>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,11 +22,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="library.py" />
-    <Compile Include="main.py" />
-    <Compile Include="test_factorial_pytest.py" />
-    <Compile Include="factorial.py" />
-    <Compile Include="test_library_unittest.py" />
+    <Compile Include="src\library.py" />
+    <Compile Include="src\main.py" />
+    <Compile Include="src\__init__.py" />
+    <Compile Include="Tests\test_factorial_pytest.py" />
+    <Compile Include="src\factorial.py" />
+    <Compile Include="Tests\test_library_unittest.py" />
+    <Compile Include="Tests\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="Tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test_results.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

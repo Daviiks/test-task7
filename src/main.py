@@ -19,14 +19,14 @@ def main():
 def run_unittests():
     print("Запуск unittest тестов...")
     loader = unittest.TestLoader()
-    suite = loader.discover('.', pattern='test_library_unittest.py')
+    suite = loader.discover('Tests', pattern='test_library_unittest.py')
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(suite)
     return result.wasSuccessful()
 
 def run_pytests():
     print("\nЗапуск pytest тестов...")
-    return pytest.main(["-v", "test_factorial_pytest.py"]) == 0
+    return pytest.main(["-v", "Tests/test_factorial_pytest.py"]) == 0
 
 if __name__ == '__main__':
     main()
